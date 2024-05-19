@@ -19,13 +19,20 @@ function parseContactsList() {
     lines.forEach(value => {
         let parts = value.split(" ")
         // console.log(parts)
-        for (let i = 0; i < parts.length; i++) {
-            if (parts[i].includes("+")) {
-                phones.push(parts[i])
-            } else if (parts[i].includes("@")) {
-                emails.push(parts[i])
+        // for (let i = 0; i < parts.length; i++) {
+        //     if (parts[i].includes("+")) {
+        //         phones.push(parts[i])
+        //     } else if (parts[i].includes("@")) {
+        //         emails.push(parts[i])
+        //     }
+        // }
+        parts.forEach(value => {
+            if (value.includes("+")) {
+                phones.push(value)
+            } else if (value.includes("@")) {
+                emails.push(value)
             }
-        }
+        })
     })
     // console.log(phones)
     // console.log(emails)
