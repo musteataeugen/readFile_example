@@ -18,14 +18,7 @@ function parseContactsList() {
     // console.log(lines)
     lines.forEach(value => {
         let parts = value.split(" ")
-        // console.log(parts)
-        // for (let i = 0; i < parts.length; i++) {
-        //     if (parts[i].includes("+")) {
-        //         phones.push(parts[i])
-        //     } else if (parts[i].includes("@")) {
-        //         emails.push(parts[i])
-        //     }
-        // }
+        // console.log(parts)      
         parts.forEach(value => {
             if (value.includes("+")) {
                 phones.push(value)
